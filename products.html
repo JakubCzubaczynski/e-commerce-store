@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="styles-products.css">
+    <title>Title</title>
+</head>
+
+<body>
+    
+    <!-- nav -->
+    <nav class="navbar">
+        <div class="center">
+            <!-- links -->
+
+
+            <button class='toggle-nav'>
+                <i class="fas fa-bars"></i>
+            </button>
+
+
+            <ul class="nav-list">
+                <li>
+                    <a href="index.html" class='nav-link'>Home</a>
+                </li>
+                <li>
+                    <a href="products.html" class='nav-link'>Products</a>
+                </li>
+                <li>
+                    <a href="about.html" class='nav-link'>About</a>
+                </li>
+            </ul>
+
+            <!-- logo -->
+            <img src="./img/logo-m.png" alt="logo" class="logo">
+
+            <!-- cart icon -->
+            <div class="toggle-container">
+                <button class="toggle-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                </button>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+    <div class="sidebar-wrapper">
+        <aside class="sidebar">
+            <i class="fas fa-times close-icon"></i>
+
+            <ul class="nav-list-sidebar">
+                <li>
+                    <i class="fas fa-angle-right"></i><a href="index.html" class='sidebar-link'>Home</a>
+                </li>
+                <li>
+                    <i class="fas fa-angle-right"></i><a href="products.html" class='sidebar-link'>Products</a>
+                </li>
+                <li>
+                    <i class="fas fa-angle-right"></i><a href="about.html" class='sidebar-link'>About</a>
+                </li>
+            </ul>
+
+        </aside>
+    </div>
+    <section class="page-path">
+        <div class="path-container">
+            <h3>home / products</h3>
+        </div>
+    </section>
+
+    <section class="products">
+        <div class="container">
+            <div class="row row-margin">
+                <div class="pad-5 col-sm-12 col-md-3">
+                    <form>
+                        <input type="text" name="search" id="search" placeholder="Search...">
+                    </form>
+                    <div class="container-menu">
+                        <div class="ul-wrapper">
+                            <p class="category-title">Categories</p>
+                            <ul class='ul-category'>
+                            </ul>
+                           
+
+                        </div>
+                        <div class="price-range-wrapper">
+                            <p class="category-title">Price</p>
+                            <form>
+                                <input type="range" class="price-filter" min="0" value="50" max="80">
+                            </form>
+                            <p class="range-value">value:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pad-5 col-sm-12 col-md-9">
+                    <div class="row row-margin products-wrapper">
+                        <!-- <div class="pad-5 col-md-12 col-lg-6 col-xl-4 product">
+                            <img src="./img/products/product-1.jpg" class="product-img" alt="">
+                            <p class="product-name">wilson bed</p>
+                            <p class="product-price">$299.99</p>
+                        </div>
+                        <div class="pad-5 col-md-12 col-lg-6 col-xl-4 product">
+                            <img src="./img/products/product-2.jpg" class="product-img" alt="">
+                            <p class="product-name">lucia bed</p>
+                            <p class="product-price">$599.99</p>
+                        </div>
+                        <div class="pad-5 col-md-12 col-lg-6 col-xl-4 product">
+                            <img src="./img/products/product-3.jpg" class="product-img" alt="">
+                            <p class="product-name">royal bed</p>
+                            <p class="product-price">$799.99</p>
+                        </div>
+                        <div class="pad-5 col-md-12 col-lg-6 col-xl-4 product">
+                            <img src="./img/products/product-1.jpg" class="product-img" alt="">
+                            <p class="product-name">wilson bed</p>
+                            <p class="product-price">$299.99</p>
+                        </div>
+                        <div class="pad-5 col-md-12 col-lg-6 col-xl-4 product">
+                            <img src="./img/products/product-2.jpg" class="product-img" alt="">
+                            <p class="product-name">lucia bed</p>
+                            <p class="product-price">$599.99</p>
+                        </div>
+                        <div class="pad-5 col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 product">
+                            <img src="./img/products/product-3.jpg" class="product-img" alt="">
+                            <p class="product-name">royal bed</p>
+                            <p class="product-price">$799.99</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Bed store company 2021. all rights reserved</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
+    <script type="module" src="./src/products.js"></script>
+</body>
+
+</html>
