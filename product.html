@@ -14,13 +14,14 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" href="styles-products.css">
+    <link rel="stylesheet" href="styles-product.css">
     <title>Title</title>
 </head>
 
 <body>
 
     <!-- nav -->
-    <nav class="navbar container">
+    <nav class="navbar">
         <div class="center">
             <!-- links -->
 
@@ -115,39 +116,23 @@
             <h3>home / products</h3>
         </div>
     </section>
-
-    <section class="products">
-        <div class="container">
-            <div class="row row-margin">
-                <div class="pad-5 col-sm-12 col-md-3">
-                    <form>
-                        <input type="text" name="search" id="search" placeholder="Search...">
-                    </form>
-                    <div class="container-menu">
-                        <div class="ul-wrapper">
-                            <p class="category-title">Categories</p>
-                            <ul class='ul-category'>
-                            </ul>
-
-
-                        </div>
-                        <div class="price-range-wrapper">
-                            <p class="category-title">Price</p>
-                            <form>
-                                <input type="range" class="price-filter" min="0" value="50" max="80">
-                            </form>
-                            <p class="range-value">value:</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="pad-5 col-sm-12 col-md-9">
-                    <div class="row row-margin products-wrapper">
-                        
-                    </div>
+    <section class="product-container container">
+        <div class="row">
+            <div class="col-12 col-md-6">
+<img src="./img/products/product-2.jpg" class="product-info-image full-img" alt="">
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="product-info-wrapper">
+                    <h2 class='product-info-title'></h2>
+                    <h5 class="product-info-category"></h5>
+                    <p class="product-info-price"></p>
+                    <p class="product-info-description"></p>
+                    <button type="button" class="product-add">add to cart</button>
                 </div>
             </div>
         </div>
     </section>
+    
 
     <footer class="footer">
         <p>Bed store company 2021. all rights reserved</p>
@@ -155,7 +140,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
-    <script type="module" src="./src/products.js"></script>
+    <script type="module" src="./src/product.js"></script>
 </body>
 
 </html>

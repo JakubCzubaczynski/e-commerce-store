@@ -1,17 +1,18 @@
+import './src/toggleSidebar.js';
 import {
     closeIcon,
     toggleNav,
     sidebarWrapper
 } from './src/sidebar.js';
 import getData from './src/getData.js';
-import getCategories from './src/getCategories.js';
 
 
 
-window.addEventListener('onload', (event) => {
+
+localStorage.setItem('product_id',0)
     getData();
+    console.log("elo1");
     
-});
 
 
 

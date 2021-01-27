@@ -1,12 +1,11 @@
 const getData = async () => {
 
-    const data = await fetch('./furniture.json').then((data) => data.json()).then(data => data);
+    const data = await fetch('./furniture.json').catch((err)=>console.log(err))
 
-    function display(x) {
-        console.log(x);
+    if (data) {
+    return data.json();
     }
-
-    display(data);
+    return data;
 
     
 

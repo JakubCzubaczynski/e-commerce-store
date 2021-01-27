@@ -3,16 +3,10 @@ import {
     toggleNav,
     sidebarWrapper
 } from './sidebar.js';
+import './toggleSidebar.js';
 import getData from './getData.js';
 import displayMenu from './displayMenu.js';
 import displayByCategory from './displayByCategory.js';
-displayMenu();
-window.addEventListener('load', (event) => {
-    console.log('page is fully loaded');
-    getData();
-    displayByCategory('all');
-});
-
 
 
 const minWrapperHeight = () => {
@@ -23,4 +17,19 @@ const minWrapperHeight = () => {
         document.querySelector('.products').style.minHeight = minHeight + "px";
     }
 }
-minWrapperHeight();
+
+
+
+window.addEventListener('load', (event) => {
+    console.log('page is fully loaded');
+    localStorage.setItem('product_id',0);
+   
+    getData();
+    displayMenu();
+    displayByCategory('all');
+    minWrapperHeight();
+   
+});
+
+
+
