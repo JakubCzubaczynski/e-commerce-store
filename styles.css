@@ -464,3 +464,42 @@ nav .center {
     color:rgb(139, 35, 35);
     font-weight: 600;
 }
+.img-wrapper{
+    position: relative;
+}
+.product-icons{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    opacity:0;
+}
+.product-icons i{
+    color:#ffffff;
+}
+.product-icons button{
+    background:var(--clr-yellow-dark);
+    border:none;
+    outline: none;
+    border-radius: 50%;
+    width:50px;
+    height:50px;
+    margin:0 5px;
+    
+}
+.product-icons button:hover{
+    background: var(--clr-light-grey);
+    transition: var(--transition);
+    transform: scale(1.2);
+    
+}
+.product-icons button:hover i{
+   
+    color:var(--clr-yellow);
+    
+}
+.img-wrapper:hover .product-icons{
+    
+    opacity:1;
+}
+

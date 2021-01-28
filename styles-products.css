@@ -100,6 +100,9 @@ nav .center {
     font-size: 1.5rem;
     padding: 0 10px 0 10px;
 }
+.toggle-cart:active,.toggle-cart:focus{
+    outline: none;
+}
 
 .logo {
     margin-left: -95px;
@@ -666,19 +669,33 @@ nav .center {
     color:#ffffff;
 }
 .product-icons button{
-    background:var(--clr-yellow);
+    background:var(--clr-yellow-dark);
     border:none;
     outline: none;
     border-radius: 50%;
-    width:40px;
-    height:40px;
+    width:50px;
+    height:50px;
     margin:0 5px;
+    
 }
 .product-icons button:hover{
-    background: var(--clr-grey);
+    background: var(--clr-light-grey);
+    transition: var(--transition);
+    transform: scale(1.2);
+    
+}
+.product-icons button:hover i{
+   
+    color:var(--clr-yellow);
     
 }
 .img-wrapper:hover .product-icons{
     
     opacity:1;
 }
+.cart-item{
+    transform: scale(1);
+    transition: var(--transition);
+}
+
+ 

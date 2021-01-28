@@ -4,12 +4,22 @@ const cartOverlay = document.querySelector('.cart-overlay');
 const cartWrapper = document.querySelector('.cart');
 
 cartBtn.addEventListener('click',()=>{
-    cartOverlay.classList.add('show');
-    cartWrapper.classList.add('show-cart');
+    openCart();
 })
 cartCloseBtn.addEventListener('click',()=>{
-    cartOverlay.classList.remove('show');
-    cartWrapper.classList.remove('show-cart');
+    closeCart();
     
 })
+const openCart = () =>{
+    cartOverlay.classList.add('show');
+    cartWrapper.classList.add('show-cart');
+    };
+
+const closeCart = () =>{
+    cartOverlay.classList.remove('show');
+    cartWrapper.classList.remove('show-cart');
+}
+
+export {openCart,closeCart}
+
 

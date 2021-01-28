@@ -1,5 +1,7 @@
+import {openCart} from './toggleSidebar.js';
 import getData from "./getData.js";
 import addToCart from './addToCart.js';
+import displayCart from "./displayCart.js";
 //display products and add events listeners
 const displayByCategory = async (x) => {
     const wrapper = document.querySelector('.products-wrapper');
@@ -40,6 +42,7 @@ const displayByCategory = async (x) => {
         item.addEventListener('click', () => {
 
             localStorage.setItem('product_id', item.getAttribute('data-id'));
+            console.log('klik');
         })
     })
 
@@ -47,9 +50,10 @@ const displayByCategory = async (x) => {
     buttonsBasket.map((item)=>{
         item.addEventListener('click',()=>{
             const id = parseInt(item.getAttribute('data-id'));
-            
+            console.log('klik');
             addToCart(id);
             
+           
             
         })
     })

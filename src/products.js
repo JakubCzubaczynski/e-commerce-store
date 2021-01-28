@@ -5,6 +5,7 @@ import {
 } from './sidebar.js';
 import './toggleSidebar.js';
 import getData from './getData.js';
+import displayCart from './displayCart.js';
 import displayMenu from './displayMenu.js';
 import displayByCategory from './displayByCategory.js';
 
@@ -28,8 +29,9 @@ window.addEventListener('load', (event) => {
     displayMenu();
     displayByCategory('all');
     minWrapperHeight();
+    displayCart();
    
 });
 
-
+export {minWrapperHeight}
 
