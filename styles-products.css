@@ -483,6 +483,7 @@ nav .center {
 }
 .range-value{
     padding:0.5rem 0 1rem 0;
+    text-transform: capitalize;
 
 }
 @media (min-width: 768px)
@@ -698,4 +699,29 @@ nav .center {
     transition: var(--transition);
 }
 
- 
+ /* animation */
+ @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+.product{
+    animation: fadein 0.5s;
+}
+.pagination-btn{
+    padding:5px 10px;
+    border:none;
+    outline: none;
+    background: rgb(21, 24, 49);
+    margin:10px;
+    color:var(--clr-light);
+    border-radius: var(--radius);
+}
+.pagination-btn:hover{
+     background: var(--clr-light-grey);
+    color:var(--clr-dark-grey);
+    
+}
+.pagination-btn-wrapper{
+    display: flex;
+    justify-content: center;
+}

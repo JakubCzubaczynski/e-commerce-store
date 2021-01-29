@@ -1,10 +1,10 @@
 
-import getData from './getData.js'
+
 import cartSetup from './cartSetup.js'
 import displayCart from './displayCart.js'
  const increaseItem = async (id) => {
         cartSetup();
-        const data = await getData();
+        
         const cart = localStorage.getItem('cart');
         let cartJs = JSON.parse(cart)
         let update = cartJs.map(item => {
@@ -16,7 +16,6 @@ import displayCart from './displayCart.js'
     };
     const decreaseItem = async (id) => {
         cartSetup();
-        const data = await getData();
         const cart = localStorage.getItem('cart');
         let cartJs = JSON.parse(cart)
         let update = cartJs.map(item => {
@@ -28,7 +27,6 @@ import displayCart from './displayCart.js'
     };
    const deleteItem = async (id) => {
         cartSetup();
-        const data = await getData();
         const cart = localStorage.getItem('cart');
         let cartJs = JSON.parse(cart)
         let update = cartJs.map(item => {
