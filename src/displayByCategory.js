@@ -1,9 +1,5 @@
-import {
-    openCart
-} from './toggleSidebar.js';
+
 import getData from "./getData.js";
-import addToCart from './addToCart.js';
-import displayCart from "./displayCart.js";
 import displayPaginationContent from './displayPaginationContent.js'
 import search from './filter/search.js';
 import buttonsHoverUtils from './buttonsHoverUtils.js';

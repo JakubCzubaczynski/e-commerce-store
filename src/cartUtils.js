@@ -4,13 +4,6 @@ const cartUtils = async () => {
     const increaseBtns = [...document.querySelectorAll('.plus')];
     const decreaseBtns = [...document.querySelectorAll('.minus')];
     const deleteBtns = [...document.querySelectorAll('.delete')];
-    
-    
-
-
-
-
-    
     increaseBtns.map(item => {
         item.addEventListener('click', () => {
             const id = parseInt(item.parentElement.parentElement.parentElement.parentElement.getAttribute('data-id'));

@@ -21,7 +21,7 @@ const ulWrapper = document.querySelector('.ul-category');
     });
     
 
-
+    
 
 
 }
