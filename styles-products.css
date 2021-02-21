@@ -170,7 +170,7 @@ nav .center {
     width: 1.5rem;
     height: 1.5rem;
     background-color:  #dea600;
-    color: var(--clr-light);
+    color: #fff;
     border-radius: 50%;
     position: absolute;
 }

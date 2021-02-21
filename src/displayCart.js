@@ -1,23 +1,25 @@
-import cartUtils from './cartUtils.js'
-import {openCart} from './toggleSidebar.js'
+import cartUtils from './cartUtils.js';
+import updateTotalAmount from './updateTotalAmount.js';
+import { openCart } from './toggleSidebar.js';
 const displayCart = async () => {
-    const data = JSON.parse(localStorage.getItem('cart'));
-    const element = document.querySelector('.shopping-cart');
-    let sum = 0;
- console.log("displayCart");
-    if (data != null) {
-        const content = data.filter(item => {
-            if (item.amount > 0) return item;
-        })
-        
-        element.innerHTML = `
+  const data = JSON.parse(localStorage.getItem('cart'));
+  const element = document.querySelector('.shopping-cart');
+  let sum = 0;
+  let total = 0;
+  console.log('displayCart');
+  if (data != null) {
+    const content = data.filter((item) => {
+      if (item.amount > 0) return item;
+    });
+
+    element.innerHTML = `
                 <div>
                     <p class="cart-label">shopping cart</p>
                 </div>`;
-        content.map(item=>{
-
-            sum+=( item.amount * item.price );
-            element.innerHTML+=`
+    content.map((item) => {
+      total += item.amount;
+      sum += item.amount * item.price;
+      element.innerHTML += `
             <div class="row cart-item my-3" data-id='${item.id}'>
                     <div class="col-3">
                         <img src="${item.image}" class="img-cart" alt="">
@@ -42,17 +44,21 @@ const displayCart = async () => {
                             <button type="button"><i class="fas fa-trash-alt delete"></i></button>
                         </div>
                     </div>
-                    <div class="col-12"><p class="total-item">$ ${Math.round((item.price*item.amount)*100)/100}</p></div>
+                    <div class="col-12"><p class="total-item">$ ${
+                      Math.round(item.price * item.amount * 100) / 100
+                    }</p></div>
                 </div>
-            `
-        })
-        element.innerHTML += `
+            `;
+    });
+    element.innerHTML += `
                 <div>
-                    <p class="cart-label" style="text-align:right;font-weight:600; color:var(--clr-dark-grey);">Total: $ ${Math.round((sum)*100)/100}</p>
+                    <p class="cart-label" style="text-align:right;font-weight:600; color:var(--clr-dark-grey);">Total: $ ${
+                      Math.round(sum * 100) / 100
+                    }</p>
+                    <p>total amount :${total} </p>
                 </div>`;
-    }
-   
-    cartUtils();
-
-}
+  }
+  updateTotalAmount(total);
+  cartUtils();
+};
 export default displayCart;
