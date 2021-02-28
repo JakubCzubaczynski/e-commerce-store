@@ -41,6 +41,7 @@ a:hover {
 
 body {
     font-family: 'Titillium Web', sans-serif;
+    
 }
 
 .hide {
@@ -268,6 +269,7 @@ nav .center {
 /* #dea600 */
 /* #495057 grey */
 /* MEDIA */
+
 @media screen and (max-width: 767px){
 /* category i price range zmienic  */
 #search{
@@ -516,7 +518,7 @@ nav .center {
 
 .sidebar{
     transform: translateY(-110%);
-    transition: var(--transition);
+    
     border-radius: var(--radius);
     width:80vw;
     height:95vh;
@@ -571,7 +573,7 @@ nav .center {
 .cart{
      position: fixed;
     transform: translateX(100%);
-    transition: var(--transition);
+    
     right:0;
     width:30vw;
     min-width:400px;
@@ -622,7 +624,7 @@ nav .center {
     cursor: pointer;
 }
 .show{
-
+transform: translateY(0);
     z-index: 100;
     opacity:1;
     visibility: visible;

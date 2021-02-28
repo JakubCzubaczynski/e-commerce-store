@@ -6,7 +6,6 @@ const displayCart = async () => {
   const element = document.querySelector('.shopping-cart');
   let sum = 0;
   let total = 0;
-  console.log('displayCart');
   if (data != null) {
     const content = data.filter((item) => {
       if (item.amount > 0) return item;
@@ -55,7 +54,6 @@ const displayCart = async () => {
                     <p class="cart-label" style="text-align:right;font-weight:600; color:var(--clr-dark-grey);">Total: $ ${
                       Math.round(sum * 100) / 100
                     }</p>
-                    <p>total amount :${total} </p>
                 </div>`;
   }
   updateTotalAmount(total);

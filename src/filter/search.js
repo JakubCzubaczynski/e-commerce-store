@@ -9,7 +9,6 @@ const search = (categoryContent) => {
     document.querySelector(
       '.range-value'
     ).innerHTML = `Value: $${rangeInput.value}`;
-    console.log(rangeInput.value);
     const filtered = categoryContent.filter((item) => {
       if (item.price <= rangeInput.value) return item;
     });
@@ -22,6 +21,7 @@ const search = (categoryContent) => {
         '<h3>Sorry, No Products Matched Your Search</h3>';
     }
   });
+
   //SEARCH FILTER
   const searchInput = document.getElementById('search');
   searchInput.addEventListener('keyup', () => {
@@ -31,7 +31,6 @@ const search = (categoryContent) => {
 
       if (text.includes(searchInput.value)) return item;
     });
-    console.log(filtered);
     if (filtered.length > 0) {
       displayPaginationContent(filtered);
 

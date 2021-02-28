@@ -34,8 +34,6 @@ const displayProductInfo = async () => {
 
   productButton.addEventListener('click', () => {
     addToCart(productId);
-    console.log(productId);
   });
-  console.log(productButton);
 };
 export default displayProductInfo;

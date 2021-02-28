@@ -10,7 +10,6 @@ const cartUtils = async () => {
           'data-id'
         )
       );
-      console.log('klik1');
       increaseItem(id);
     });
   });
@@ -21,7 +20,6 @@ const cartUtils = async () => {
           'data-id'
         )
       );
-      console.log('klik2');
       decreaseItem(id);
     });
   });
@@ -32,7 +30,6 @@ const cartUtils = async () => {
           'data-id'
         )
       );
-      console.log('klik3');
       deleteItem(id);
     });
   });

@@ -15,12 +15,9 @@ const minWrapperHeight = () => {
 };
 
 window.addEventListener('load', (event) => {
-  console.log('page is fully loaded');
   localStorage.setItem('product_id', 0);
-
   getData();
   displayMenu();
-
   displayByCategory('all');
   minWrapperHeight();
   displayCart();
